@@ -1,0 +1,9 @@
+const path = require('path');
+
+//Indicamos donde se van a encontrar los archivos requeridos
+module.exports = {
+  'config': path.resolve('app/Config', 'database.js'),
+  'models-path': path.resolve('app', 'Models'),
+  'seeders-path': path.resolve('app/Database', 'seeders'),
+  'migrations-path': path.resolve('app/Database', 'migrations')
+};
