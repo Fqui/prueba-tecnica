@@ -19,7 +19,7 @@ App.use("/api/v1/", Router);
 App.listen(PORT, async function () {
    console.log("Servidor funcionando en el puerto " + PORT);
    try {
-      await sequelize.authenticate();
+      await sequelize.sync({force: true});
       console.log('Conexion a la DB: OK');
     } catch (error) {
       console.error('Hubo un error al conectarse a la DB: ', error);
