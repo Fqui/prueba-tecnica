@@ -1,8 +1,11 @@
 const express = require('express');
 const Router = express.Router();
 
-Router.get("/", (req, res) => {
-   res.status(200).json({message: 'OK'})
-})
+const user = require("./User");
+const character = require("./Character");
+
+//Rutas
+user(Router);
+// character(Router);
 
 module.exports = Router;

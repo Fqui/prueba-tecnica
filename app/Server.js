@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 //middlewares
 App.use(express.json());
-App.use(express.urlencoded({extended: true}));
+App.use(express.urlencoded({extended: false}));
 
 //Rutas
 App.use("/api/v1/", Router);
@@ -19,7 +19,7 @@ App.use("/api/v1/", Router);
 App.listen(PORT, async function () {
    console.log("Servidor funcionando en el puerto " + PORT);
    try {
-      await sequelize.sync({force: true});
+      await sequelize.authenticate;
       console.log('Conexion a la DB: OK');
     } catch (error) {
       console.error('Hubo un error al conectarse a la DB: ', error);

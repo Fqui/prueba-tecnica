@@ -11,7 +11,9 @@ module.exports = {
           edad: 27,
           peso: 75,
           historia: "Historia(?)",
-          peliculas_series: "ejemplo"
+          peliculas_series: "ejemplo",
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           imagen: "https://static.wikia.nocookie.net/disney/images/9/96/Blancanieve1.jpg/revision/latest/scale-to-width-down/218?cb=20200501040907&path-prefix=es",
@@ -19,7 +21,9 @@ module.exports = {
           edad: 25,
           peso: 65,
           historia: "Historia(?)",
-          peliculas_series: "ejemplo"
+          peliculas_series: "ejemplo",
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           imagen: "https://static.wikia.nocookie.net/disney/images/3/3d/Dory.png/revision/latest/scale-to-width-down/332?cb=20120223085358&path-prefix=es",
@@ -27,7 +31,9 @@ module.exports = {
           edad: 3,
           peso: 0.100,
           historia: "Historia(?)",
-          peliculas_series: "ejemplo"
+          peliculas_series: "ejemplo",
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
       ],
       {}
