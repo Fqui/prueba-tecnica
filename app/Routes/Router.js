@@ -6,6 +6,6 @@ const character = require("./Character");
 
 //Rutas
 user(Router);
-// character(Router);
+character(Router);
 
 module.exports = Router;
