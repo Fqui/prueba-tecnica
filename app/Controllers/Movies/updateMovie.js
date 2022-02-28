@@ -2,17 +2,17 @@ const db = require("../../Models/index");
 
 module.exports = async (req, res) => {
   const id = req.params.id;
-  const { imagen, nombre, edad, peso, historia, peliculas_series } = req.body;
+  const { imagen, titulo, creacion, calificacion, personajes_asociados } =
+    req.body;
 
   try {
-    const response = await db.Personaje.findOne({ where: { id } });
+    const response = await db.Pelicula_Serie.findOne({ where: { id } });
     await response.update({
       imagen,
-      nombre,
-      edad,
-      peso,
-      historia,
-      peliculas_series,
+      titulo,
+      creacion,
+      calificacion,
+      personajes_asociados,
     });
     if (!response) {
       res

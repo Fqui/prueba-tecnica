@@ -8,9 +8,7 @@ module.exports = async (req, res) => {
 
   try {
     const user = await db.Usuario.findOne({
-      where: {
-        email,
-      },
+      where: { email },
     });
     if (!user) {
       res.status(404).json({ msg: "Usuario con este correo no encontrado" });
@@ -35,6 +33,6 @@ module.exports = async (req, res) => {
       }
     }
   } catch (error) {
-    res.status(500).json({ msg: "error", error: error });
+    res.status(500).json({ msg: "Error", error: error });
   }
 };

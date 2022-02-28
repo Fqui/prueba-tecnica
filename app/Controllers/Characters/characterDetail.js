@@ -5,8 +5,12 @@ module.exports = async (req, res) => {
 
   try {
     const response = await db.Personaje.findOne({ where: { id } });
-    res.json({ detail: response });
+    if (!response) {
+      res.status(404).json({ msg: "Personaje no encontrado" });
+    } else {
+      res.status(200).json({ response: response });
+    }
   } catch (error) {
-     res.json({ error: error})
+    res.json({ error: error });
   }
 };

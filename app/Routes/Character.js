@@ -6,9 +6,7 @@ const Character = (Router) => {
    Router.put("/characters/:id", charactercontroller.updateCharacter)
    Router.delete("/characters/:id", charactercontroller.deleteCharacter)
    Router.get("/characters/:id/detail", charactercontroller.characterDetail)
-   //busquedas por nombre, peso, idPelicula
-   //Router.get("/characters", charactercontroller.searchCharacterByName)
-
+  
 }
 
 module.exports = Character;
